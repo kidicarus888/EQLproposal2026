@@ -33,9 +33,10 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Softer shadow */
   display: flex;
   flex-direction: column;
-  height: 720px;
+  min-height: 720px; /* Allow height to grow */
+  height: auto; /* Allow height to grow */
   justify-content: flex-start; /* Default to top alignment */
-  overflow: hidden;
+  overflow: visible; /* Allow content to be visible */
   padding: 60px;
   position: relative;
   width: 1280px;
@@ -446,47 +447,122 @@ body {
     </div>
 </div>
 
-<!-- Slide 2: Executive Summary -->
+<!-- Slide 2: Executive Summary (No Image) -->
 <div class="slide-container" id="slide2">
-    <h2 class="slide-title">Executive Summary: Proven Success</h2>
-    <div class="content-area">
-        <div class="highlight-numbers-layout">
-            <div class="numbers-grid">
-                <div>
-                    <div class="number">78%</div>
-                    <div class="number-label">of participants showed improved blood glucose levels.</div>
+    <h2 class="slide-title">Executive Summary</h2>
+    <div class="content-area" style="align-items: flex-start;">
+        <div style="width: 100%;">
+            <h3>Proven Clinical & Financial Outcomes</h3>
+            <p>In 2025, Equira Life and Loop Health pilots demonstrated significant and measurable clinical, financial, and engagement improvements. The MQARE - Jambi Perawang (2023) pilot proved financial ROI, while the OKI (2025) pilot confirmed strong clinical outcomes and user engagement.</p>
+            
+            <h3 style="margin-top: 40px;">The Path Forward</h3>
+            <p>This proposal builds upon that proven success — expanding from diabetes management to include prevention, creating a more holistic chronic condition care framework for Equira clients.</p>
+            
+            <p style="margin-top: 20px; font-style: italic;">Detailed pilot results are presented in the following case studies.</p>
+
+            <div class="two-column" style="margin-top: 40px; gap: 20px;">
+                <div class="tile" style="background-color: #f0f9ff; border-color: #3B82F6;">
+                    <h3 style="color: #3B82F6;">MQARE - Jambi Perawang (2023)</h3>
+                    <p>Demonstrated significant financial savings and medical cost reduction.</p>
                 </div>
-                <div>
-                    <div class="number">4.0%</div>
-                    <div class="number-label">average body weight reduction (29.5 kg total).</div>
+                <div class="tile" style="background-color: #f0fdf4; border-color: #10B981;">
+                    <h3 style="color: #10B981;">OKI (2025)</h3>
+                    <p>Confirmed strong clinical improvements and high participant engagement.</p>
                 </div>
-                <div>
-                    <div class="number">200+</div>
-                    <div class="number-label">monthly app logs per active user.</div>
-                </div>
-            </div>
-            <div class="text-content">
-                <h3>OKI Pilot Program 2025</h3>
-                <p>In 2025, Equira Life and Loop Health successfully launched the OKI x Loop Diabetes Management Program, engaging 45 employees with measurable clinical improvements.</p>
-                <h3>The Path Forward</h3>
-                <p>This proposal builds upon that proven success — expanding from diabetes management to include prevention, creating a more holistic chronic condition care framework for Equira clients.</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 3: Background & Context -->
+<!-- Slide 3: Case Study 1: MQARE (Updated Stats) -->
 <div class="slide-container" id="slide3">
+    <h2 class="slide-title">Case Study 1: MQARE - Jambi Perawang (2023)</h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div style="padding-right: 30px;">
+                <h3>Measurable Cost Reduction</h3>
+                <p>The 6-month MQARE pilot (49 participants) demonstrated a clear financial impact by reducing total medical costs.</p>
+                <div class="tile" style="text-align: left; padding: 20px; background-color: #f0fdf4; border-color: #10B981;">
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="font-size: 22px; margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: #10B981; width: 30px;"></i><strong>27.3%</strong> Total Medical Cost Reduction</li>
+                        <li style="font-size: 22px; margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: #10B981; width: 30px;"></i><strong>50%</strong> of participants reduced medical costs</li>
+                        <li style="font-size: 22px; margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: #10B981; width: 30px;"></i><strong>14/49</strong> people saved > Rp 1 Million on claims</li>
+                        <li style="font-size: 22px; margin-bottom: 15px;"><i class="fa-solid fa-check" style="color: #10B981; width: 30px;"></i>Highest reduction: <strong>Rp 8.668.562,00</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tiled-content" style="flex-direction: column; gap: 20px;">
+                <div class="tile">
+                    <h3 style="color: #1E293B;">Pre-Program Total Cost</h3>
+                    <div class="number" style="color: #EF4444; font-size: 60px;">Rp 148.6 M</div>
+                </div>
+                <div class="tile">
+                    <h3 style="color: #1E293B;">Post-Program Total Cost</h3>
+                    <div class="number" style="color: #10B981; font-size: 60px;">Rp 108.0 M</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Case Study 2: OKI -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Case Study 2: OKI (2025) 3-Month Program Summary</h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div class="tile" style="flex-grow: 1.2;">
+                <h3>Avg. Engagement (Per User / Month)</h3>
+                <div class="tiled-content" style="gap: 15px; margin-top: 20px;">
+                    <div class="tile">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">42x</div>
+                        <h3 style="color: #1E293B; font-size: 20px;">Total Loggings</h3>
+                    </div>
+                    <div class="tile">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">17x</div>
+                        <h3 style="color: #1E293B; font-size: 20px;">Blood Glucose Readings</h3>
+                    </div>
+                     <div class="tile">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">5x</div>
+                        <h3 style="color: #1E293B; font-size: 20px;">Coach Consultations</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tile" style="flex-grow: 0.8;">
+                <h3>Successful Metrics (Per User)</h3>
+                <div class="tiled-content" style="gap: 15px; margin-top: 20px;">
+                    <div class="tile">
+                        <div class="number" style="color: #10B981; font-size: 60px;">3.3<span style="font-size: 30px;">kg</span></div>
+                        <h3 style="color: #1E293B; font-size: 18px;">Avg. Weight Lost</h3>
+                    </div>
+                    <div class="tile">
+                        <div class="number" style="color: #10B981; font-size: 60px;">3.4%</div>
+                        <h3 style="color: #1E293B; font-size: 18px;">% Weight Lost</h3>
+                    </div>
+                </div>
+                 <div class="tiled-content" style="gap: 15px; margin-top: 15px;">
+                    <div class="tile">
+                        <div class="number" style="color: #10B981; font-size: 60px;">36.4</div>
+                        <h3 style="color: #1E293B; font-size: 18px;">Avg. GDS Reduction</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Slide 5: Background & Context (Old Slide 3) -->
+<div class="slide-container" id="slide5">
     <h2 class="slide-title">Background & Context</h2>
     <div class="content-area">
-        <div class="two-column">
+        <div style="width: 100%;">
             <div>
                 <h3>The Challenge</h3>
-                <p>Chronic diseases — specifically <strong>diabetes, prediabetes, and metabolic disease risk (e.g., hypertension, obesity)</strong> — remain among the top drivers of corporate healthcare costs in Indonesia.</p>
-                <h3>The Solution</h3>
-                <p>Early intervention through continuous lifestyle management is proven to improve employee health, productivity, and cost efficiency. Loop Health provides measurable, scalable programs that combine education, data tracking, and human coaching to drive this change.</p>
-                <h3>The Evidence</h3>
-                <p>Research consistently shows that modest weight loss (5-7%) can significantly reduce the risk of developing type 2 diabetes and improve conditions like hypertension. Our programs are built on this proven principle.</p>
+                <p><strong>Chronic diseases</strong> — specifically <strong>diabetes, prediabetes, and metabolic disease risk (e.g., hypertension, obesity)</strong> — remain among the <strong>top drivers of corporate healthcare costs</strong> in Indonesia.</p>
+                <h3 style="margin-top: 20px;">The Solution</h3>
+                <p><strong>Early intervention</strong> through <strong>continuous lifestyle management</strong> is proven to <strong>improve employee health, productivity, and cost efficiency</strong>. Loop Health provides <strong>measurable, scalable programs</strong> that combine education, data tracking, and <strong>human coaching</strong> to drive this change.</p>
+                <h3 style="margin-top: 20px;">The Evidence</h3>
+                <p>Research consistently shows that <strong>modest weight loss (5-7%)</strong> can <strong>significantly reduce the risk</strong> of developing type 2 diabetes and <strong>improve conditions like hypertension</strong>. Our programs are built on this proven principle.</p>
                 <p style="font-size: 14px; color: #64748B; margin-top: 20px;">
                     *Reference: The Diabetes Prevention Program (DPP) Research Group. (2002). Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. 
                     <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa012512" target="_blank" style="color: #3B82F6; text-decoration: underline;">
@@ -494,15 +570,12 @@ body {
                     </a>
                 </p>
             </div>
-            <div>
-                <div class="image-wrapper" style="height: 450px;"><img src="https://placehold.co/600x450/d1fae5/1e293b?text=Data+Driven+Health" alt="Abstract health data visualization"></div>
-            </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 4: Program Objectives (New Req #3) -->
-<div class="slide-container" id="slide4">
+<!-- Slide 6: Program Objectives (Old Slide 4) -->
+<div class="slide-container" id="slide6">
     <h2 class="slide-title">Program Objectives & Goals</h2>
     <div class="content-area">
         <div class="tiled-content">
@@ -530,8 +603,8 @@ body {
     </div>
 </div>
 
-<!-- Slide 5: Program Overview (Table) -->
-<div class="slide-container" id="slide5">
+<!-- Slide 7: Program Overview (Old Slide 5) -->
+<div class="slide-container" id="slide7">
     <h2 class="slide-title">Program Overview</h2>
     <div class="content-area table-layout">
         <table>
@@ -569,8 +642,8 @@ body {
     </div>
 </div>
 
-<!-- Slide 6: Program Deep Dive: DMP & DPP -->
-<div class="slide-container" id="slide6">
+<!-- Slide 8: Program Deep Dive (UPDATED) -->
+<div class="slide-container" id="slide8">
     <h2 class="slide-title">Program Features: Management & Prevention</h2>
     <div class="content-area">
         <div class="two-column tiled">
@@ -578,62 +651,65 @@ body {
                 <h3 style="color: #3B82F6;">Program 1: Diabetes Management (DMP)</h3>
                 <p>A 12-month structured program for employees already living with diabetes.</p>
                 <ul>
-                    <li>Personalized digital health coaching (7am–10pm daily)</li>
+                    <li><strong>Loop Health Kit</strong> with unlimited glucometers & strips</li>
+                    <li><strong>1-on-1 personalized coaching</strong> via chat (7am–10pm daily)</li>
+                    <li>Monthly <strong>video consultations</strong> with Loop coaches</li>
                     <li>Regular tracking of blood glucose, food, and activities</li>
-                    <li>Monthly video consultations with Loop coaches</li>
                     <li>Structured educational content and reminders</li>
-                    <li><strong>OKI Pilot Outcome:</strong> 78% improved blood glucose</li>
                 </ul>
             </div>
             <div>
                 <h3 style="color: #10B981;">Program 2: Digital Prevention (DPP)</h3>
                 <p>A 6-month lifestyle program for employees who are overweight or at risk.</p>
                 <ul>
+                    <li><strong>Loop Health Kit</strong> with a smart scale</li>
+                    <li><strong>1-on-1 personalized coaching</strong> via chat & video calls</li>
                     <li>Digital risk screening (BMI, waist, glucose risk)</li>
                     <li>Personalized habit coaching and goal tracking</li>
                     <li>Weight and activity monitoring</li>
-                    <li
-                    >Monthly virtual consultations and progress review</li>
-                    <li><strong>Early Data Outcome:</strong> 3.3% avg. weight reduction in 2 months</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 7: Key Health Indicators (Updated per request) -->
-<div class="slide-container" id="slide7">
+<!-- Slide 9: Key Health Indicators (Old Slide 7) -->
+<div class="slide-container" id="slide9">
     <h2 class="slide-title">Key Parameters for Measurement</h2>
     <div class="content-area">
         <div class="two-column tiled">
             <div>
-                <h3 style="color: #3B82F6;">Health Parameters (Clinical Outcomes)</h3>
-                <p>Focused on measurable clinical health improvements.</p>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="padding-left: 0;"><i class="fa-solid fa-heart-pulse" style="color: #3B82F6; width: 30px;"></i> <strong>HbA1c</strong> (Baseline, 6mo, 12mo) - <em>DMP Focus</em></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-droplet" style="color: #3B82F6; width: 30px;"></i> <strong>Fasting Blood Glucose</strong> - <em>DMP Focus</em></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-weight-scale" style="color: #10B981; width: 30px;"></i> <strong>% Body Weight Reduction</strong> - <em>DPP Focus</em></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-child" style="color: #475569; width: 30px;"></i> <strong>Body Weight & BMI</strong> (All users)</li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-ruler-horizontal" style="color: #10B981; width: 30px;"></i> <strong>Waist Circumference</strong> - <em>DPP Focus</em></li>
+                <h3 style="color: #3B82F6;">DMP: Diabetes Management</h3>
+                <p>Focus: Clinical diabetes control & management.</p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-heart-pulse" style="color: #3B82F6; width: 30px;"></i> <strong>HbA1c</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-droplet" style="color: #3B82F6; width: 30px;"></i> <strong>Fasting Blood Glucose</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-child" style="color: #475569; width: 30px;"></i> <strong>Body Weight & BMI</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-tint" style="color: #3B82F6; width: 30px;"></i> <strong>Blood Sugar Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-utensils" style="color: #475569; width: 30px;"></i> <strong>Food Tracker Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-person-running" style="color: #475569; width: 30px;"></i> <strong>Physical Activity Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-comments" style="color: #475569; width: 30px;"></i> <strong>Coach Chat Engagement</strong> (Engagement)</li>
                 </ul>
             </div>
             <div>
-                <h3 style="color: #10B981;">App Engagement (Behavioral Metrics)</h3>
-                <p>Focused on tracking daily user activity and engagement.</p>
-                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="padding-left: 0;"><i class="fa-solid fa-utensils" style="color: #475569; width: 30px;"></i> <strong>Food Tracker Logs</strong></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-person-running" style="color: #475569; width: 30px;"></i> <strong>Physical Activity Logs</strong></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-weight-scale" style="color: #475569; width: 30px;"></i> <strong>Weight Logs</strong></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-tint" style="color: #3B82F6; width: 30px;"></i> <strong>Blood Sugar Logs</strong> - <em>DMP Focus</em></li>
-                    <li style="padding-left: 0;"><i class="fa-solid fa-comments" style="color: #475569; width: 30px;"></i> <strong>Coach Chat Engagement</strong></li>
+                <h3 style="color: #10B981;">DPP: Digital Prevention</h3>
+                <p>Focus: Weight reduction & lifestyle risk.</p>
+                 <ul style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-weight-scale" style="color: #10B981; width: 30px;"></i> <strong>% Body Weight Reduction</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-ruler-horizontal" style="color: #10B981; width: 30px;"></i> <strong>Waist Circumference</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-child" style="color: #475569; width: 30px;"></i> <strong>Body Weight & BMI</strong> (Clinical)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-weight-scale" style="color: #10B981; width: 30px;"></i> <strong>Weight Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-utensils" style="color: #475569; width: 30px;"></i> <strong>Food Tracker Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-person-running" style="color: #475569; width: 30px;"></i> <strong>Physical Activity Logs</strong> (Engagement)</li>
+                    <li style="padding-left: 0; margin-bottom: 10px;"><i class="fa-solid fa-comments" style="color: #475569; width: 30px;"></i> <strong>Coach Chat Engagement</strong> (Engagement)</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 8: Activity Timeline (New Req #1) -->
-<div class="slide-container" id="slide8">
+<!-- Slide 10: Activity Timeline (Old Slide 8) -->
+<div class="slide-container" id="slide10">
     <h2 class="slide-title">Program Plan & Activity Timeline</h2>
     <div class="content-area timeline-layout">
         <div class="timeline-line"></div>
@@ -664,75 +740,64 @@ body {
     </div>
 </div>
 
-<!-- Slide 9: OKI Case Snapshot -->
-<div class="slide-container" id="slide9">
-    <h2 class="slide-title">Case Snapshot: OKI x Equira x Loop Results (June–Aug 2025)</h2>
+<!-- Slide 11: Pricing & Support -->
+<div class="slide-container" id="slide11">
+    <h2 class="slide-title">Pricing & Support</h2>
     <div class="content-area">
-        <div class="two-column" style="align-items: center;">
+        <div class="two-column tiled">
             <div>
-                <h3>Program</h3>
-                <p>Diabetes Management (DMP)</p>
-                <h3>Participants</h3>
-                <p>45 employees</p>
-                <br>
-                <h3>Key Observations</h3>
+                <h3>Program Pricing</h3>
+                <p><strong>DMP (Diabetes Management Program)</strong></p>
                 <ul>
-                    <li><strong>65%</strong> of users reduced blood sugar within 8 weeks.</li>
-                    <li><strong>64%</strong> achieved measurable weight loss.</li>
-                    <li>Monthly tracking data supported proactive interventions by Loop coaches.</li>
+                    <li><strong>Rp 99,000</strong> per member per month</li>
+                </ul>
+                <p><strong>DPP (Digital Prevention Program)</strong></p>
+                <ul>
+                    <li><strong>Rp 75,000</strong> per member per month</li>
+                </ul>
+                
+                <h3 style="margin-top: 20px;">Optional Costs</h3>
+                <ul style="list-style-type: disc; padding-left: 25px;">
+                    <li><strong>HbA1c Testing:</strong> Rp. 125,000/test (Available on-site at program start and end for DMP).</li>
                 </ul>
             </div>
-            <div class="tiled-content" style="flex-direction: column; gap: 20px;">
-                <div class="tile">
-                    <h3 style="color: #1E293B;">Avg. Blood Sugar Reduction</h3>
-                    <div class="number" style="color: #3B82F6; font-size: 80px;">34.1 <span style="font-size: 40px;">mg/dL</span></div>
-                </div>
-                 <div class="tile">
-                    <h3 style="color: #1E293B;">Avg. Weight Reduction</h3>
-                    <div class="number" style="color: #3B82F6; font-size: 80px;">4.0%</div>
-                </div>
-                <div class="tile">
-                    <h3 style="color: #1E293B;">Total Weight Lost</h3>
-                    <div class="number" style="color: #3B82F6; font-size: 80px;">29.5 <span style="font-size: 40px;">kg</span></div>
-                </div>
+            <div>
+                <h3>Onsite Support</h3>
+                <ul style="list-style-type: disc; padding-left: 25px; font-size: 16px; line-height: 1.4;">
+                    <li>Free onsite support (initial screening, health talk, onboarding) for JABODETABEK locations and for online participants.</li>
+                    <li>For locations outside JABODETABEK and Bandung, a flat fee of <strong>Rp. 8,000,000 per visit</strong> applies (covers 2-day team travel/logistics).</li>
+                    <li>Final progress presentations are in-person for JABODETABEK/Bandung and online for other areas.</li>
+                    <li>For DMP, a final HbA1c test is included. Travel for this specific test is free for all locations, but the test cost (Rp. 125,000) still applies.</li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Slide 10: Pricing & Next Steps (New Req #4) -->
-<div class="slide-container" id="slide10">
-    <h2 class="slide-title">Cost Proposal & Next Steps</h2>
-    <div class="final-slide-layout">
-        <div class="two-column tiled">
-            <div>
-                <h3>Pricing & Incentives</h3>
-                <p><strong>DMP (Diabetes Management Program)</strong></p>
-                <ul>
-                    <li><strong>Rp 99,000</strong> per member per month</li>
-                    <li><strong>Rp 120,000</strong> per HbA1c test (optional)</li>
-                    <li><strong>Onsite Health Talk & Screening:</strong> Free for groups ≥100 members.</li>
-                </ul>
-                <p><strong>DPP (Digital Prevention Program)</strong></p>
-                <ul>
-                    <li><strong>Rp 75,000</strong> per member per month</li>
-                    <li>Fully digital program model (two 6-month batches)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Next Steps</h3>
-                <ol style="padding-left: 25px;">
+<!-- Slide 12: Next Steps & Contact -->
+<div class="slide-container" id="slide12">
+    <h2 class="slide-title">Next Steps</h2>
+    <div class="final-slide-layout" style="display: flex; flex-direction: column; justify-content: center; flex-grow: 1;">
+        <div class="two-column" style="align-items: center;">
+            <div class="tile" style="background-color: #f0f9ff; border-color: #3B82F6;">
+                <h3 style="color: #3B82F6;">Next Steps</h3>
+                <ol style="padding-left: 25px; text-align: left; font-size: 16px;">
                     <li style="margin-bottom: 15px;">Confirm total participant numbers for DMP and DPP.</li>
                     <li style="margin-bottom: 15px;">Schedule a coordination meeting with Equira’s Operational Services team.</li>
                     <li style="margin-bottom: 15px;">Finalize site locations and rollout dates for health talks.</li>
                     <li style="margin-bottom: 15px;">Launch first program batch (Recommended: Jan 2026).</li>
                 </ol>
             </div>
+            <div style="text-align: center;">
+                <h3 style="color: #1E293B; font-size: 30px;">Let's Get Started</h3>
+                <p class="contact-info" style="font-size: 20px;">
+                    <strong>PT Aplikasi Loop Health</strong><br>
+                    Satrio Tower 26th Floor, Kuningan, Jakarta 12950<br>
+                    🌐 www.loophealth.id
+                </p>
+                <p class="quote" style="margin-top: 20px;">“A better performing workforce starts with healthier employees.”</p>
+            </div>
         </div>
-        <p class="contact-info">
-            <strong>PT Aplikasi Loop Health</strong> | Satrio Tower 26th Floor, Kuningan, Jakarta 12950 | 🌐 www.loophealth.id
-        </p>
-        <p class="quote">“A better performing workforce starts with healthier employees.”</p>
     </div>
 </div>
 
