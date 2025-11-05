@@ -328,15 +328,16 @@ body {
 .table-layout th,
 .table-layout td {
   border-bottom: 1px solid #E2E8F0;
-  padding: 16px 20px;
+  padding: 12px; /* Smaller padding for dense table */
   text-align: left;
   vertical-align: top;
+  font-size: 15px; /* Smaller font for dense table */
 }
 
 .table-layout th {
   background-color: #F8FAFC;
   color: #334155;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
@@ -348,7 +349,8 @@ body {
 .table-layout tfoot td {
     border-top: 2px solid #1E293B;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
+    color: #1E293B;
 }
 
 .table-layout .fee {
@@ -521,62 +523,74 @@ body {
     </div>
 </div>
 
-<!-- Slide 4: NEW Case Study (APP Pilot - Cost Savings) -->
+<!-- Slide 4: NEW Case Study (APP Pilot - Cost Savings) - UPDATED TABLE -->
 <div class="slide-container" id="slide4">
     <h2 class="slide-title">Case Study: APP Pilot (Jambi & Perawang) - Potential Cost Savings</h2>
     <div class="content-area">
-        <div class="two-column" style="align-items: flex-start;">
+        <div class="two-column" style="align-items: flex-start; grid-template-columns: 1.2fr 1fr; gap: 30px;">
             <div>
                 <h3>Favorable Shift in HbA1c Ranges (49 Users)</h3>
-                <p>The <strong>49 participants</strong> successfully moved from high-cost, high-risk categories to healthier, lower-cost maintenance categories over the <strong>6-month program (Nov 2023 - May 2024)</strong>.</p>
+                <p>The <strong>49 participants</strong> (Nov 2023 - May 2024) moved from high-cost categories to healthier, lower-cost categories.</p>
                 <div class="table-layout" style="margin-top: 20px;">
-                    <table>
+                    <table style="font-size: 14px;"> <!-- Smaller font -->
                         <thead>
                             <tr>
                                 <th>HbA1c Category</th>
                                 <th>Avg. Annual Cost*</th>
-                                <th>Month 0 Users</th>
-                                <th>Month 6 Users</th>
+                                <th>M0 Users</th>
+                                <th>M0 Implied Cost</th>
+                                <th>M6 Users</th>
+                                <th>M6 Implied Cost</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Poor (>9.0%)</strong></td>
                                 <td>$1,405</td>
-                                <td style="font-size: 24px; font-weight: 700;">13</td>
-                                <td style="font-size: 24px; font-weight: 700; color: #10B981;">2</td>
+                                <td>13</td>
+                                <td>$18,265</td>
+                                <td style="color: #10B981;">2</td>
+                                <td style="color: #10B981;">$2,810</td>
                             </tr>
                             <tr>
                                 <td><strong>Fair (7.0-8.9%)</strong></td>
                                 <td>$1,075</td>
-                                <td style="font-size: 24px; font-weight: 700;">19</td>
-                                <td style="font-size: 24px; font-weight: 700; color: #10B981;">13</td>
+                                <td>19</td>
+                                <td>$20,425</td>
+                                <td style="color: #10B981;">13</td>
+                                <td style="color: #10B981;">$13,975</td>
                             </tr>
                             <tr>
                                 <td><strong>Good (6.5-6.9%)</strong></td>
                                 <td>$769</td>
-                                <td style="font-size: 24px; font-weight: 700;">3</td>
-                                <td style="font-size: 24px; font-weight: 700; color: #10B981;">8</td>
+                                <td>3</td>
+                                <td>$2,307</td>
+                                <td style="color: #10B981;">8</td>
+                                <td style="color: #10B981;">$6,152</td>
                             </tr>
                              <tr>
                                 <td><strong>Prediabetes (5.7-6.4%)</strong></td>
-                                <td>N/A</td>
-                                <td style="font-size: 24px; font-weight: 700;">11</td>
-                                <td style="font-size: 24px; font-weight: 700; color: #10B981;">16</td>
+                                <td>$769*</td>
+                                <td>11</td>
+                                <td>$8,459</td>
+                                <td style="color: #10B981;">16</td>
+                                <td style="color: #10B981;">$12,304</td>
                             </tr>
                             <tr>
                                 <td><strong>Below Prediabetes (<5.6%)</strong></td>
-                                <td>N/A</td>
-                                <td style="font-size: 24px; font-weight: 700;">3</td>
-                                <td style="font-size: 24px; font-weight: 700; color: #10B981;">10</td>
+                                <td>$769*</td>
+                                <td>3</td>
+                                <td>$2,307</td>
+                                <td style="color: #10B981;">10</td>
+                                <td style="color: #10B981;">$7,690</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td><strong>Total</strong></td>
-                                <td></td>
-                                <td style="font-size: 24px; font-weight: 700;"><strong>49</strong></td>
-                                <td style="font-size: 24px; font-weight: 700;"><strong>49</strong></td>
+                                <td colspan="3"><strong>Total Potential Annual Cost</strong></td>
+                                <td><strong>$51,763</strong></td>
+                                <td><strong>49 Users</strong></td>
+                                <td style="color: #10B981;"><strong>$42,931</strong></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -584,29 +598,27 @@ body {
             </div>
             <div>
                 <h3>Potential Annual Savings</h3>
-                <p>This clinical improvement translates to significant potential long-term savings, based on UGM research on diabetes costs in Indonesia.</p>
+                <p>This clinical improvement translates to significant long-term savings, based on UGM research.</p>
                 <div class="tile" style="margin-top: 20px; background-color: #f0fdf4; border-color: #10B981;">
                     <h3 style="color: #1E293B;">Total Potential Annual Savings</h3>
-                    <div class="number" style="color: #10B981; font-size: 80px;">~US$ 9,000</div>
-                    <p style="font-size: 24px; margin-top: -10px; font-weight: 700;">(approx. Rp 135 Juta)</p>
+                    <div class="number" style="color: #10B981; font-size: 80px;">~$8,832</div>
+                    <p style="font-size: 24px; margin-top: -10px; font-weight: 700;">(approx. Rp 132 Juta)</p>
                     <p style="font-size: 20px; margin-top: 10px;">(for 49 users)</p>
                 </div>
                  <div class="tile" style="margin-top: 20px; background-color: #F8FAFC; border-color: #E2E8F0;">
                     <h3 style="color: #1E293B;">Avg. Annual Cost Per Person</h3>
                     <div class="number" style="color: #EF4444; font-size: 50px;">$1,056 <span style="color: #1E293B; font-size: 40px;">→</span> $876</div>
-                    <p style="font-size: 20px; margin-top: -5px; font-weight: 700;">(approx. Rp 13.1 Juta)</p>
                     <p style="font-size: 20px; margin-top: 10px;">(Month 0 vs. Month 6)</p>
                 </div>
                 <div class="tile" style="margin-top: 20px; background-color: #f0fdf4; border-color: #10B981;">
                     <h3 style="color: #1E293B;">Implied Annual Savings (Net ROI)</h3>
-                    <p style="font-size: 20px; color: #065f46; font-weight: 700; margin-top: 10px;">
-                        ~Rp 1.8 Juta potential savings per user, per annum
+                    <p style="font-size: 20px; color: #065f46; font-weight: 700; margin-top: 10px; margin-bottom: 0;">
+                        ~Rp 1.8 Juta+ potential savings per user, per annum
                     </p>
+                    <p style="font-size: 14px; color: #065f46; margin-top: 5px;">(net of DMP program cost)</p>
                 </div>
-                <p style="font-size: 14px; color: #64748B; margin-top: 20px;">
-                    *Potential savings calculated by cross-multiplying the change in users with the average annual cost for each category.
-                    <br>
-                    *Cost data from 2020 Gadjah Mada University (UGM) study: "Direct and Indirect Cost of Diabetes Mellitus in Indonesia".
+                <p style="font-size: 14px; color: #64748B; margin-top: 15px;">
+                    *Cost data from 2020 Gadjah Mada University (UGM) study. Cost for prediabetes/good categories ($769) is based on UGM study's total cost calculations. Exchange Rate: 15,000 IDR/USD.
                 </p>
             </div>
         </div>
@@ -831,6 +843,7 @@ body {
                             </tr>
                             <tr>
                                 <td><strong>Digital Prevention (DPP)</strong></td>
+                                Example of Angular Code:
                                 <td>6 Months</td>
                                 <td>Overweight / at risk for diabetes</td>
                                 <td>% Weight Loss</td>
