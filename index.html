@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equira x Loop Employee Health Program 2025-2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* 1. THE SETUP */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f4f8; /* Lighter, cleaner gray */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 0;
+  place-items: center;
+}
+
+.slide-container {
+  align-items: flex-start; /* Default to top alignment */
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  justify-content: flex-start; /* Default to top alignment */
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
+  width: 1280px;
+}
+
+/* 1.1 BACKGROUND STYLING */
+
+.slide-container::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.slide-container>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. CONSISTENT TYPOGRAPHY */
+
+/* Headings Font - Poppins */
+.slide-container h1,
+.slide-container h2,
+.slide-container h3,
+.slide-container .slide-title {
+  color: #1E293B; /* Dark Blue-Gray */
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Body Text Font - Lato */
+.slide-container p,
+.slide-container li,
+.slide-container .subtitle,
+.slide-container .number-label,
+.slide-container .legend li,
+.slide-container .chart-summary,
+.slide-container .bar .label,
+.slide-container th,
+.slide-container td,
+.slide-container .alternating-text-tile p,
+.slide-container .bleed-text-side p {
+  color: #475569; /* Medium Slate Gray */
+  font-family: 'Lato', sans-serif;
+}
+
+/* Consistent Font Sizes */
+
+.slide-container h1 {
+  font-size: 70px;
+}
+
+.slide-container .slide-title {
+  /* This is an h2 */
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+}
+
+.slide-container h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Unified body text size */
+
+.slide-container p,
+.slide-container li,
+.slide-container .subtitle,
+.slide-container .legend li,
+.slide-container .chart-summary,
+.slide-container .bar .label,
+.slide-container th,
+.slide-container td,
+.slide-container .alternating-text-tile p,
+.slide-container .bleed-text-side p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.slide-container .subtitle {
+  font-weight: 400;
+  margin: 20px auto;
+  font-size: 24px;
+}
+
+.slide-container .content-area {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 3. LAYOUT DEFINITIONS */
+
+.title-layout {
+  justify-content: center; /* Center content on title slide */
+  text-align: center;
+}
+
+.two-column {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+}
+
+.two-column.tiled {
+  align-items: stretch;
+}
+
+.two-column.tiled>div {
+  background-color: #F8FAFC; /* Light gray tile */
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  padding: 40px;
+}
+
+.two-column.tiled h3 {
+  color: #10B981; /* Loop Green */
+}
+
+.two-column ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 25px;
+}
+
+.two-column li {
+  margin-bottom: 15px;
+}
+
+.image-wrapper {
+  border-radius: 12px;
+  height: 350px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-wrapper img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tiled-content {
+  align-items: stretch;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile {
+  align-items: center;
+  background-color: #F8FAFC;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  padding: 30px;
+  text-align: center;
+}
+
+.tile .icon {
+  color: #10B981; /* Loop Green */
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.tile h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.bullet-list {
+  max-width: 900px;
+  width: 100%;
+}
+
+.bullet-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bullet-list li {
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.bullet-list i {
+  color: #10B981; /* Loop Green */
+  font-size: 24px;
+  left: 0;
+  margin-top: 5px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.bullet-list li strong {
+  color: #334155;
+  font-weight: 700;
+}
+
+.full-bg-image {
+  background-position: center;
+  background-size: cover;
+  justify-content: center; /* Center content on BG image slide */
+}
+
+.full-bg-image .content-overlay {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85); /* White scrim */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.full-bg-image h1,
+.full-bg-image h2,
+.full-bg-image p {
+  color: #1E293B; /* Dark text on light scrim */
+}
+
+.highlight-numbers-layout {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.highlight-numbers-layout .numbers-grid {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.highlight-numbers-layout .text-content {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.highlight-numbers-layout .number {
+  color: #3B82F6; /* Equira Blue */
+  font-size: 100px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.highlight-numbers-layout .number-label {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 4. CHART STYLING */
+
+/* Table Layout */
+
+.table-layout {
+  width: 100%;
+}
+
+.table-layout table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-layout th,
+.table-layout td {
+  border-bottom: 1px solid #E2E8F0;
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.table-layout th {
+  background-color: #F8FAFC;
+  color: #334155;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.table-layout tr:last-child td {
+  border-bottom: none;
+}
+
+.table-layout .fee {
+    font-weight: 700;
+    color: #10B981;
+}
+
+/* Timeline Layout */
+
+.timeline-layout {
+  align-items: center; /* Center the whole layout */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-layout .timeline-line {
+  background-color: #E2E8F0;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-2px);
+  width: 100%;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  width: 23%;
+}
+
+.timeline-item::after {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #10B981; /* Loop Green */
+  content: '';
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  z-index: 1;
+}
+
+.timeline-item .content-wrapper {
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) .content-wrapper {
+  bottom: 50%;
+  margin-bottom: 25px;
+}
+
+.timeline-item:nth-child(even) .content-wrapper {
+  margin-top: 25px;
+  top: 50%;
+}
+
+.timeline-item h3 {
+  color: #10B981; /* Loop Green */
+  font-size: 20px;
+}
+.timeline-item p {
+  font-size: 16px;
+}
+
+/* Q&A / Final Slide Layout */
+.final-slide-layout {
+    width: 100%;
+}
+.final-slide-layout .quote {
+    font-size: 24px;
+    font-style: italic;
+    color: #10B981;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.final-slide-layout .contact-info {
+  color: #334155;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+<!-- Slide 1: Title_Slide -->
+<div class="slide-container full-bg-image title-layout" id="slide1" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://placehold.co/1280x720/a0d9b0/ffffff?text=Healthier+Workforce');">
+    <div class="content-overlay">
+        <h1 style="color: #10B981;">Equira x Loop</h1>
+        <h1>Employee Health Program 2025–2026</h1>
+        <p class="subtitle" style="color: #1E293B;">Building a Healthier and More Productive Workforce
+            <br>By PT Aplikasi Loop Health
+        </p>
+    </div>
+</div>
+
+<!-- Slide 2: Executive Summary -->
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">Executive Summary: Proven Success</h2>
+    <div class="content-area">
+        <div class="highlight-numbers-layout">
+            <div class="numbers-grid">
+                <div>
+                    <div class="number">78%</div>
+                    <div class="number-label">of participants showed improved blood glucose levels.</div>
+                </div>
+                <div>
+                    <div class="number">4.0%</div>
+                    <div class="number-label">average body weight reduction (29.5 kg total).</div>
+                </div>
+                <div>
+                    <div class="number">200+</div>
+                    <div class="number-label">monthly app logs per active user.</div>
+                </div>
+            </div>
+            <div class="text-content">
+                <h3>OKI Pilot Program 2025</h3>
+                <p>In 2025, Equira Life and Loop Health successfully launched the OKI x Loop Diabetes Management Program, engaging 45 employees with measurable clinical improvements.</p>
+                <h3>The Path Forward</h3>
+                <p>This proposal builds upon that proven success — expanding from diabetes management to include prevention, creating a more holistic chronic condition care framework for Equira clients.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Background & Context -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Background & Context</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>The Challenge</h3>
+                <p>Chronic diseases — specifically <strong>diabetes, prediabetes, and metabolic disease risk (e.g., hypertension, obesity)</strong> — remain among the top drivers of corporate healthcare costs in Indonesia.</p>
+                <h3>The Solution</h3>
+                <p>Early intervention through continuous lifestyle management is proven to improve employee health, productivity, and cost efficiency. Loop Health provides measurable, scalable programs that combine education, data tracking, and human coaching to drive this change.</p>
+                <h3>The Evidence</h3>
+                <p>Research consistently shows that modest weight loss (5-7%) can significantly reduce the risk of developing type 2 diabetes and improve conditions like hypertension. Our programs are built on this proven principle.</p>
+                <p style="font-size: 14px; color: #64748B; margin-top: 20px;">
+                    *Reference: The Diabetes Prevention Program (DPP) Research Group. (2002). Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. 
+                    <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa012512" target="_blank" style="color: #3B82F6; text-decoration: underline;">
+                        N Engl J Med, 346(8), 393-403.
+                    </a>
+                </p>
+            </div>
+            <div>
+                <div class="image-wrapper" style="height: 450px;"><img src="https://placehold.co/600x450/d1fae5/1e293b?text=Data+Driven+Health" alt="Abstract health data visualization"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Program Objectives (New Req #3) -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Program Objectives & Goals</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                <h3>Manage & Prevent</h3>
+                <p>Address both diagnosed (DMP) and at-risk (DPP) employees within a single, unified framework.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Improve Health Outcomes</h3>
+                <p>Focus on measurable clinical improvements, primarily HbA1c reduction and sustainable weight/BMI loss.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Enhance Productivity</h3>
+                <p>Reduce absenteeism and improve employee engagement through healthier, more active lifestyles.</p>
+            </div>
+             <div class="tile">
+                <div class="icon"><i class="fa-solid fa-database"></i></div>
+                <h3>Provide Measurable Data</h3>
+                <p>Deliver monthly engagement dashboards and comprehensive progress reports to track ROI.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Program Overview (Table) -->
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Program Overview</h2>
+    <div class="content-area table-layout">
+        <table>
+            <thead>
+                <tr>
+                    <th>Program</th>
+                    <th>Target Group</th>
+                    <th>Duration</th>
+                    <th>Key KPI</th>
+                    <th>Monthly Fee / Member</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Diabetes Management Program (DMP)</strong></td>
+                    <td>Employees with diagnosed diabetes</td>
+                    <td>12 months</td>
+                    <td>HbA1c improvement</td>
+                    <td class="fee">Rp 99,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Digital Prevention Program (DPP)</strong></td>
+                    <td>Overweight or high-risk employees</td>
+                    <td>6 months per batch (2x/year)</td>
+                    <td>% Body Weight Reduction</td>
+                    <td class="fee">Rp 75,000</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="background-color: #F8FAFC; text-align: center;">
+                        <strong>Both programs include:</strong> Access to the Loop Health mobile app, Personalized digital coaching, Educational content, and Monthly reports.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Slide 6: Program Deep Dive: DMP & DPP -->
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">Program Features: Management & Prevention</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3 style="color: #3B82F6;">Program 1: Diabetes Management (DMP)</h3>
+                <p>A 12-month structured program for employees already living with diabetes.</p>
+                <ul>
+                    <li>Personalized digital health coaching (7am–10pm daily)</li>
+                    <li>Regular tracking of blood glucose, food, and activities</li>
+                    <li>Monthly video consultations with Loop coaches</li>
+                    <li>Structured educational content and reminders</li>
+                    <li><strong>OKI Pilot Outcome:</strong> 78% improved blood glucose</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #10B981;">Program 2: Digital Prevention (DPP)</h3>
+                <p>A 6-month lifestyle program for employees who are overweight or at risk.</p>
+                <ul>
+                    <li>Digital risk screening (BMI, waist, glucose risk)</li>
+                    <li>Personalized habit coaching and goal tracking</li>
+                    <li>Weight and activity monitoring</li>
+                    <li
+                    >Monthly virtual consultations and progress review</li>
+                    <li><strong>Early Data Outcome:</strong> 3.3% avg. weight reduction in 2 months</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Key Health Indicators (Updated per request) -->
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">Key Parameters for Measurement</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3 style="color: #3B82F6;">Health Parameters (Clinical Outcomes)</h3>
+                <p>Focused on measurable clinical health improvements.</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding-left: 0;"><i class="fa-solid fa-heart-pulse" style="color: #3B82F6; width: 30px;"></i> <strong>HbA1c</strong> (Baseline, 6mo, 12mo) - <em>DMP Focus</em></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-droplet" style="color: #3B82F6; width: 30px;"></i> <strong>Fasting Blood Glucose</strong> - <em>DMP Focus</em></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-weight-scale" style="color: #10B981; width: 30px;"></i> <strong>% Body Weight Reduction</strong> - <em>DPP Focus</em></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-child" style="color: #475569; width: 30px;"></i> <strong>Body Weight & BMI</strong> (All users)</li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-ruler-horizontal" style="color: #10B981; width: 30px;"></i> <strong>Waist Circumference</strong> - <em>DPP Focus</em></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #10B981;">App Engagement (Behavioral Metrics)</h3>
+                <p>Focused on tracking daily user activity and engagement.</p>
+                 <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding-left: 0;"><i class="fa-solid fa-utensils" style="color: #475569; width: 30px;"></i> <strong>Food Tracker Logs</strong></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-person-running" style="color: #475569; width: 30px;"></i> <strong>Physical Activity Logs</strong></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-weight-scale" style="color: #475569; width: 30px;"></i> <strong>Weight Logs</strong></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-tint" style="color: #3B82F6; width: 30px;"></i> <strong>Blood Sugar Logs</strong> - <em>DMP Focus</em></li>
+                    <li style="padding-left: 0;"><i class="fa-solid fa-comments" style="color: #475569; width: 30px;"></i> <strong>Coach Chat Engagement</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Activity Timeline (New Req #1) -->
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">Program Plan & Activity Timeline</h2>
+    <div class="content-area timeline-layout">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+            <div class="content-wrapper">
+                <h3>Month 1</h3>
+                <p>Health Talk, Screening & Onboarding. Baseline data collection and app setup.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content-wrapper">
+                <h3>Monthly</h3>
+                <p>Continuous Coaching & Tracking. Lifestyle monitoring and progress updates.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content-wrapper">
+                <h3>Month 6</h3>
+                <p>Mid-Term Review. HbA1c or weight check and behavior assessment.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content-wrapper">
+                <h3>Month 12</h3>
+                <p>Final Review & Reporting. Final health outcomes and renewal discussion.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: OKI Case Snapshot -->
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Case Snapshot: OKI x Equira x Loop Results (June–Aug 2025)</h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div>
+                <h3>Program</h3>
+                <p>Diabetes Management (DMP)</p>
+                <h3>Participants</h3>
+                <p>45 employees</p>
+                <br>
+                <h3>Key Observations</h3>
+                <ul>
+                    <li><strong>65%</strong> of users reduced blood sugar within 8 weeks.</li>
+                    <li><strong>64%</strong> achieved measurable weight loss.</li>
+                    <li>Monthly tracking data supported proactive interventions by Loop coaches.</li>
+                </ul>
+            </div>
+            <div class="tiled-content" style="flex-direction: column; gap: 20px;">
+                <div class="tile">
+                    <h3 style="color: #1E293B;">Avg. Blood Sugar Reduction</h3>
+                    <div class="number" style="color: #3B82F6; font-size: 80px;">34.1 <span style="font-size: 40px;">mg/dL</span></div>
+                </div>
+                 <div class="tile">
+                    <h3 style="color: #1E293B;">Avg. Weight Reduction</h3>
+                    <div class="number" style="color: #3B82F6; font-size: 80px;">4.0%</div>
+                </div>
+                <div class="tile">
+                    <h3 style="color: #1E293B;">Total Weight Lost</h3>
+                    <div class="number" style="color: #3B82F6; font-size: 80px;">29.5 <span style="font-size: 40px;">kg</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Pricing & Next Steps (New Req #4) -->
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">Cost Proposal & Next Steps</h2>
+    <div class="final-slide-layout">
+        <div class="two-column tiled">
+            <div>
+                <h3>Pricing & Incentives</h3>
+                <p><strong>DMP (Diabetes Management Program)</strong></p>
+                <ul>
+                    <li><strong>Rp 99,000</strong> per member per month</li>
+                    <li><strong>Rp 120,000</strong> per HbA1c test (optional)</li>
+                    <li><strong>Onsite Health Talk & Screening:</strong> Free for groups ≥100 members.</li>
+                </ul>
+                <p><strong>DPP (Digital Prevention Program)</strong></p>
+                <ul>
+                    <li><strong>Rp 75,000</strong> per member per month</li>
+                    <li>Fully digital program model (two 6-month batches)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Next Steps</h3>
+                <ol style="padding-left: 25px;">
+                    <li style="margin-bottom: 15px;">Confirm total participant numbers for DMP and DPP.</li>
+                    <li style="margin-bottom: 15px;">Schedule a coordination meeting with Equira’s Operational Services team.</li>
+                    <li style="margin-bottom: 15px;">Finalize site locations and rollout dates for health talks.</li>
+                    <li style="margin-bottom: 15px;">Launch first program batch (Recommended: Jan 2026).</li>
+                </ol>
+            </div>
+        </div>
+        <p class="contact-info">
+            <strong>PT Aplikasi Loop Health</strong> | Satrio Tower 26th Floor, Kuningan, Jakarta 12950 | 🌐 www.loophealth.id
+        </p>
+        <p class="quote">“A better performing workforce starts with healthier employees.”</p>
+    </div>
+</div>
+
+</body>
+</html>
