@@ -401,9 +401,103 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.table-layout tr:last-child td {
+  border-bottom: none;
+}
+
+.table-layout tfoot td {
+    border-top: 2px solid #1E293B;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1E293B;
+}
+
+.table-layout .fee {
+    font-weight: 700;
+    color: #10B981;
+}
+
+/* Timeline Layout */
+
+.timeline-layout {
+  align-items: center; /* Center the whole layout */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-layout .timeline-line {
+  background-color: #E2E8F0;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-2px);
+  width: 100%;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  width: 23%;
+}
+
+.timeline-item::after {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #10B981; /* Loop Green */
+  content: '';
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  z-index: 1;
+}
+
+.timeline-item .content-wrapper {
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) .content-wrapper {
+  bottom: 50%;
+  margin-bottom: 25px;
+}
+
+.timeline-item:nth-child(even) .content-wrapper {
+  margin-top: 25px;
+  top: 50%;
+}
+
+.timeline-item h3 {
+  color: #10B981; /* Loop Green */
+  font-size: 20px;
+}
+.timeline-item p {
+  font-size: 16px;
+}
+
 /* Q&A / Final Slide Layout */
 .final-slide-layout {
-/* ... existing code ... -->
+    width: 100%;
+}
+.final-slide-layout .quote {
+    font-size: 24px;
+    font-style: italic;
+    color: #10B981;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.final-slide-layout .contact-info {
+  color: #334155;
+  font-size: 18px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -443,8 +537,806 @@ body.show-id [lang="en"] {
 
 .reference-link {
     font-size: 14px !important;
-/* ... existing code ... -->
-<!-- ... (All slides from 1 to 17 remain the same) ... -->
+    line-height: 1.4 !important;
+    margin-top: 10px;
+    display: block;
+}
+.reference-link a {
+    color: #3B82F6;
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+    <button id="lang-en">EN</button>
+    <button id="lang-id">ID</button>
+</div>
+
+<!-- Slide 1: Title_Slide -->
+<div class="slide-container full-bg-image" id="slide1" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://placehold.co/1280x720/a0d9b0/ffffff?text=Healthier+Workforce');">
+    <div class="title-layout">
+        <h1 style="color: #10B981;">Equira x Loop</h1>
+        <h1>
+            <span lang="en">Employee Health Program 2025–2026</span>
+            <span lang="id">Program Kesehatan Karyawan 2025–2026</span>
+        </h1>
+        <p class="subtitle" style="color: #1E293B;">
+            <span lang="en" class="block">Building a Healthier and More Productive Workforce</span>
+            <span langid="id" class="block">Membangun Tenaga Kerja yang Lebih Sehat dan Produktif</span>
+            <span lang="en" class="block" style="font-size: 18px; margin-top: 10px;">By PT Aplikasi Loop Health</span>
+            <span lang="id" class="block" style="font-size: 18px; margin-top: 10px;">Oleh PT Aplikasi Loop Health</span>
+        </p>
+    </div>
+</div>
+
+<!-- Slide 2: Executive Summary - UPDATED -->
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">
+        <span lang="en">1. Executive Summary</span>
+        <span lang="id">1. Ringkasan Eksekutif</span>
+    </h2>
+    <div class="content-area" style="align-items: flex-start;">
+        <div style="width: 100%;">
+            <p>
+                <span lang="en">The Equira x Loop Employee Health Program is a structured, evidence-based digital health solution designed to improve employee health outcomes, reduce long-term risk, and support companies in building a healthier, more productive workforce.</span>
+                <span lang="id">Program Kesehatan Karyawan Equira x Loop adalah solusi kesehatan digital terstruktur dan berbasis bukti yang dirancang untuk meningkatkan hasil kesehatan karyawan, mengurangi risiko jangka panjang, dan mendukung perusahaan dalam membangun tenaga kerja yang lebih sehat dan produktif.</span>
+            </p>
+            <p style="margin-top: 20px;">
+                <span lang="en">The program offers two core tracks:</span>
+                <span lang="id">Program ini menawarkan dua jalur utama:</span>
+            </p>
+            <div class="two-column" style="margin-top: 20px; gap: 20px;">
+                 <div class="tile" style="background-color: #f0f9ff; border-color: #3B82F6;">
+                    <h3 style="color: #3B82F6;">
+                        <span lang="en">Diabetes Management Program (DMP)</span>
+                        <span lang="id">Program Manajemen Diabetes (DMP)</span>
+                    </h3>
+                    <p>
+                        <span lang="en">For employees diagnosed with diabetes</span>
+                        <span lang="id">Untuk karyawan yang didiagnosis diabetes</span>
+                    </p>
+                </div>
+                <div class="tile" style="background-color: #f0fdf4; border-color: #10B981;">
+                    <h3 style="color: #10B981;">
+                        <span lang="en">Digital Prevention Program (DPP)</span>
+                        <span lang="id">Program Pencegahan Digital (DPP)</span>
+                    </h3>
+                    <p>
+                        <span lang="en">For employees at risk (prediabetes, elevated BMI, metabolic indicators)</span>
+                        <span lang="id">Untuk karyawan berisiko (pradiabetes, BMI tinggi, indikator metabolik)</span>
+                    </p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;">
+                <span lang="en">Each track delivers a comprehensive experience including video consultations, health curriculum & coaching, daily monitoring, group support, and monthly reporting.</span>
+                <span lang="id">Setiap jalur memberikan pengalaman komprehensif termasuk konsultasi video, kurikulum & bimbingan kesehatan, pemantauan harian, dukungan kelompok, dan pelaporan bulanan.</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Why Employee Health Matters - UPDATED -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">
+        <span lang="en">2. Why This Matters for Equira & Employers</span>
+        <span lang="id">2. Mengapa Ini Penting bagi Equira & Perusahaan</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>
+                    <span lang="en">The Challenge: A Growing Epidemic</span>
+                    <span lang="id">Tantangan: Epidemi yang Berkembang</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%;">
+                    <li><i class="fa-solid fa-triangle-exclamation"></i><strong><span lang="en">1 in 5</span><span lang="id">1 dari 5</span></strong> <span lang="en">Indonesian adults has prediabetes.</span><span lang="id">orang dewasa Indonesia menderita pradiabetes.</span></li>
+                    <li><i class="fa-solid fa-magnifying-glass-chart"></i><strong><span lang="en">3 out of 4</span><span lang="id">3 dari 4</span></strong> <span lang="en">people with diabetes are undiagnosed.</span><span lang="id">penderita diabetes tidak terdiagnosis.</span></li>
+                    <li><i class="fa-solid fa-person-walking-with-cane"></i><strong><span lang="en">$66B USD</span><span lang="id">$66 Miliar USD</span></strong> <span lang="en">estimated 7-year GDP loss due to diabetes-related productivity issues.</span><span lang="id">estimasi kerugian PDB 7 tahun akibat masalah produktivitas terkait diabetes.</span></li>
+                </ul>
+                <p class="reference-link">
+                    <span lang="en">Source: </span><span lang="id">Sumber: </span>
+                    <a href="https://www.idf.org/our-network/regions-members/western-pacific/members/116-indonesia.html" target="_blank">IDF Atlas</a>, 
+                    <a href="https://www.kemkes.go.id/id/profil-kesehatan-indonesia-2021" target="_blank">Indonesian MoH (Riskesdas)</a>, 
+                    <span lang="en">McKinsey.</span><span lang="id">McKinsey.</span>
+                </p>
+
+                <h3 style="margin-top: 30px;">
+                    <span lang="en">Evidence-Based Impact</span>
+                    <span lang="id">Dampak Berbasis Bukti</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%;">
+                    <li><i class="fa-solid fa-shield-heart"></i><strong><span lang="en">HbA1c Reduction:</span><span lang="id">Penurunan HbA1c:</span></strong> <span lang="en">Every 1% drop in HbA1c reduces complication risk (e.g., heart failure, amputation) by 21-37%.</span><span lang="id">Setiap penurunan 1% HbA1c mengurangi risiko komplikasi (gagal jantung, amputasi) sebesar 21-37%.</span></li>
+                    <li><i class="fa-solid fa-person-running"></i><strong><span lang="en">Weight Loss:</span><span lang="id">Penurunan Berat Badan:</span></strong> <span lang="en">5-7% weight loss can reduce diabetes risk by 58% and improves hypertension & cholesterol.</span><span lang="id">Penurunan berat badan 5-7% dapat mengurangi risiko diabetes sebesar 58% & memperbaiki hipertensi & kolesterol.</span></li>
+                </ul>
+                <p class="reference-link">
+                    <span lang="en">Source: </span><span lang="id">Sumber: </span>
+                    <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(00)02602-9/fulltext" target="_blank">UKPDS 35 Study (HbA1c)</a>, 
+                    <a href="https://www.nejm.org/doi/full/10.1056/nejmoa012512" target="_blank">Diabetes Prevention Program (DPP) Study (Weight Loss)</a>
+                </p>
+            </div>
+            <div>
+                <h3>
+                    <span lang="en">The Financial Impact</span>
+                    <span lang="id">Dampak Finansial</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%;">
+                    <li><i class="fa-solid fa-arrow-trend-up"></i><strong><span lang="en">Healthcare Inflation:</span><span lang="id">Inflasi Kesehatan:</span></strong> <span lang="en">Costs are rising at 13.6% annually in Indonesia, far outpacing general inflation.</span><span lang="id">Biaya meningkat 13.6% per tahun di Indonesia, jauh melampaui inflasi umum.</span></li>
+                    <li><i class="fa-solid fa-file-invoice-dollar"></i><strong><span lang="en">Higher Claims:</span><span lang="id">Klaim Lebih Tinggi:</span></strong> <span lang="en">Undiagnosed or poorly managed chronic conditions lead to high-cost hospitalizations.</span><span lang="id">Kondisi kronis yang tidak terdiagnosis atau tidak terkelola dengan baik menyebabkan rawat inap berbiaya tinggi.</span></li>
+                    <li><i class="fa-solid fa-arrow-down-wide-short"></i><strong><span lang="en">Lower Productivity:</span><span lang="id">Produktivitas Menurun:</span></strong> <span lang="en">Employees suffer from more sick days, presenteeism, and lower on-site energy.</span><span lang="id">Karyawan lebih sering absen sakit, presenteeism, dan memiliki energi lebih rendah di tempat kerja.</span></li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">
+                    <span lang="en">The Equira Partnership Value</span>
+                    <span lang="id">Nilai Kemitraan Equira</span>
+                </h3>
+                 <p>
+                    <span lang="en" class="block">For Equira, this program is a powerful tool for <strong>risk management</strong>.</span>
+                    <span lang-><span lang="id" class="block">Bagi Equira, program ini adalah alat yang kuat untuk <strong>manajemen risiko</strong>.</span>
+                </p>
+                <p style="margin-top: 15px;">
+                    <span lang="en" class="block">By proactively managing employee health, you <strong>reduce the frequency and severity of future claims</strong>, improve the overall risk profile of your clients, and provide a high-value service that differentiates you from competitors.</span>
+                    <span lang="id" class="block">Dengan mengelola kesehatan karyawan secara proaktif, Anda <strong>mengurangi frekuensi dan tingkat keparahan klaim di masa depan</strong>, memperbaiki profil risiko klien Anda secara keseluruhan, dan menyediakan layanan bernilai tinggi yang membedakan Anda dari pesaing.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Two Distinct Programs -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">
+        <span lang="en">3. Two Distinct Programs (Fully Split)</span>
+        <span lang="id">3. Dua Program Berbeda (Sepenuhnya Terpisah)</span>
+    </h2>
+    <div class="content-area" style="align-items: flex-start;">
+        <div style="width: 100%;">
+            <p>
+                <span lang="en">To avoid confusion and ensure optimal outcomes, we clearly separate the two offerings. Each has its own goals, tools, and curriculum.</span>
+                <span lang="id">Untuk menghindari kebingungan dan memastikan hasil yang optimal, kami memisahkan kedua penawaran dengan jelas. Masing-masing memiliki tujuan, alat, dan kurikulumnya sendiri.</span>
+            </p>
+            <div class="two-column" style="margin-top: 30px; gap: 40px;">
+                <div class="tile" style="background-color: #f0f9ff; border-color: #3B82F6; padding: 40px;">
+                    <h3 style="color: #3B82F6;">
+                        <span lang="en">Diabetes Management Program (DMP)</span>
+                        <span lang="id">Program Manajemen Diabetes (DMP)</span>
+                    </h3>
+                    <p>
+                        <span lang="en">For employees diagnosed with diabetes (HbA1c ≥ 6.5%).</span>
+                        <span lang="id">Untuk karyawan yang didiagnosis diabetes (HbA1c ≥ 6.5%).</span>
+                    </p>
+                    <div class="bullet-list">
+                        <ul>
+                            <li><i class="fa-solid fa-bullseye"></i><strong><span lang="en">Goal:</span><span lang="id">Tujuan:</span></strong> <span lang="en">Improve glucose control & prevent complications.</span><span lang="id">Meningkatkan kontrol glukosa & mencegah komplikasi.</span></li>
+                            <li><i class="fa-solid fa-kit-medical"></i><strong><span lang="en">Tools:</span><span lang="id">Alat:</span></strong> <span lang="en">Glucometer, unlimited strips, app, chat support.</span><span lang="id">Glukometer, strip tanpa batas, aplikasi, dukungan obrolan.</span></li>
+                            <li><i class="fa-solid fa-book-open"></i><strong><span lang="en">Focus:</span><span lang="id">Fokus:</span></strong> <span lang="en">Health Curriculum & Coaching.</span><span lang="id">Kurikulum & Bimbingan Kesehatan.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tile" style="background-color: #f0fdf4; border-color: #10B981; padding: 40px;">
+                    <h3 style="color: #10B981;">
+                        <span lang="en">Digital Prevention Program (DPP)</span>
+                        <span lang="id">Program Pencegahan Digital (DPP)</span>
+                    </h3>
+                    <p>
+                        <span lang="en">For employees with prediabetes or elevated risk factors.</span>
+                        <span lang="id">Untuk karyawan dengan pradiabetes atau faktor risiko tinggi.</span>
+                    </p>
+                    <div class="bullet-list">
+                        <ul>
+                            <li><i class="fa-solid fa-bullseye"></i><strong><span lang="en">Goal:</span><span lang="id">Tujuan:</span></strong> <span lang="en">Reduce risk, encourage weight loss, build habits.</span><span lang="id">Mengurangi risiko, mendorong penurunan BB, membangun kebiasaan.</span></li>
+                            <li><i class="fa-solid fa-weight-scale"></i><strong><span lang="en">Tools:</span><span lang="id">Alat:</span></strong> <span lang="en">Weighing scale, app, food logging, chat support.</span><span lang="id">Timbangan, aplikasi, pencatatan makanan, dukungan obrolan.</span></li>
+                            <li><i class="fa-solid fa-book-open"></i><strong><span lang="en">Focus:</span><span lang="id">Fokus:</span></strong> <span lang="en">6-Month Lifestyle & Habit Curriculum.</span><span lang="id">Kurikulum Gaya Hidup & Kebiasaan 6 Bulan.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Program 1: Diabetes Management (DMP) -->
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">
+        <span lang="en">4. Program 1: Diabetes Management (DMP)</span>
+        <span lang="id">4. Program 1: Program Manajemen Diabetes (DMP)</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div>
+                <h3>
+                    <span lang="en">Objective</span>
+                    <span lang="id">Tujuan</span>
+                </h3>
+                <p>
+                    <span lang="en">To improve blood glucose control, prevent complications, strengthen daily habits, and support long-term disease management.</span>
+                    <span lang="id">Untuk meningkatkan kontrol glukosa darah, mencegah komplikasi, memperkuat kebiasaan harian, dan mendukung manajemen penyakit jangka panjang.</span>
+                </p>
+                <h3 style="margin-top: 30px;">
+                    <span lang="en">What Participants Receive</span>
+                    <span lang="id">Apa yang Diterima Peserta</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%; margin-top: 10px;">
+                    <li><i class="fa-solid fa-kit-medical"></i><strong><span lang="en">Loop Health Kit (DMP)</span><span lang="id">Loop Health Kit (DMP)</span></strong> <span lang="en">(Glucometer, unlimited strips & lancets)</span><span lang="id">(Glukometer, strip & lanset tanpa batas)</span></li>
+                    <li><i class="fa-solid fa-video"></i><strong><span lang="en">1:1 Video Consultations</span><span lang="id">Konsultasi Video 1:1</span></strong> <span lang="en">(Monthly)</span><span lang="id">(Bulanan)</span></li>
+                    <li><i class="fa-solid fa-comments"></i><strong><span lang="en">Unlimited Chat Access</span><span lang="id">Akses Obrolan Tanpa Batas</span></strong></li>
+                    <li><i class="fa-solid fa-book-open"></i><strong><span lang="en">Full Health Curriculum</span><span lang="id">Kurikulum Kesehatan Penuh</span></strong></li>
+                    <li><i class="fa-solid fa-users"></i><strong><span lang="en">Group Chat Support & Gamification</span><span lang="id">Dukungan Obrolan Grup & Gamifikasi</span></strong></li>
+                </ul>
+            </div>
+            <div class="tile centered" style="background-color: #f0f9ff; border-color: #3B82F6;">
+                <img src="https://placehold.co/400x300/3B82F6/FFFFFF?text=DMP+Kit" alt="DMP Kit" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+                <h3 style="color: #3B82F6;">
+                    <span lang="en">DMP: Clinical Focus</span>
+                    <span lang="id">DMP: Fokus Klinis</span>
+                </h3>
+                <p>
+                    <span lang="en">Focuses on glucose control, medication adherence, and complication prevention.</span>
+                    <span lang="id">Berfokus pada kontrol glukosa, kepatuhan obat, dan pencegahan komplikasi.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: DMP: 12-Month Curriculum -->
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">
+        <span lang="en">DMP: Health Curriculum Topics</span>
+        <span lang="id">DMP: Topik Kurikulum Kesehatan</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="gap: 30px;">
+            <div class="tile">
+                <h3><span lang="en">Foundations</span><span lang="id">Dasar-dasar</span></h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Understanding Diabetes & Insulin</span><span lang="id">Memahami Diabetes & Insulin</span></li>
+                        <li><span lang="en">Glucose Testing Patterns (GDP, GD2PP)</span><span lang="id">Pola Tes Glukosa (GDP, GD2PP)</span></li>
+                        <li><span lang="en">Complications (Kidney, Eyes, Heart, Foot)</span><span lang="id">Komplikasi (Ginjal, Mata, Jantung, Kaki)</span></li>
+                        <li><span lang="en">Annual Check-up Schedules</span><span lang="id">Jadwal Pemeriksaan Tahunan</span></li>
+                        <li><span lang="en">Medication Guidance & Safety</span><span lang="id">Panduan & Keamanan Obat</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <h3><span lang="en">Clinical Events</span><span lang="id">Kejadian Klinis</span></h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Hypoglycemia & 15-15 Rule</span><span lang="id">Hipoglikemia & Aturan 15-15</span></li>
+                        <li><span lang="en">Hyperglycemia & Escalation Signs</span><span lang="id">Hiperglikemia & Tanda Eskalasi</span></li>
+                        <li><span lang="en">Managing Sick Days</span><span lang="id">Mengelola Hari Sakit</span></li>
+                        <li><span lang="en">Traveling with Diabetes</span><span lang="id">Bepergian dengan Diabetes</span></li>
+                        <li><span lang="en">Ramadan / Fasting Management</span><span lang="id">Manajemen Ramadan / Puasa</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <h3><span lang="en">Nutrition</span><span lang="id">Nutrisi</span></h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Plate Model (Piring T/Y) & 3J Principles</span><span lang="id">Model Piring (Piring T/Y) & Prinsip 3J</span></li>
+                        <li><span lang="en">Carbohydrates, GI, & Low-Glycemic Meals</span><span lang="id">Karbohidrat, GI, & Makanan Rendah Glikemik</span></li>
+                        <li><span lang="en">Fiber, Protein, & Fat Education</span><span lang="id">Edukasi Serat, Protein, & Lemak</span></li>
+                        <li><span lang="en">Reading Nutrition Labels</span><span lang="id">Membaca Label Nutrisi</span></li>
+                        <li><span lang="en">Reducing Sugar Intake</span><span lang="id">Mengurangi Asupan Gula</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <h3><span lang="en">Lifestyle</span><span lang="id">Gaya Hidup</span></h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Exercise Guidelines for Diabetes</span><span lang="id">Panduan Olahraga untuk Diabetes</span></li>
+                        <li><span lang="en">Portion Control Strategies</span><span lang="id">Strategi Pengendalian Porsi</span></li>
+                        <li><span lang="en">Stress Management</span><span lang="id">Manajemen Stres</span></li>
+                        <li><span lang="en">Sleep Hygiene</span><span lang="id">Kebersihan Tidur</span></li>
+                        <li><span lang="en">Alcohol & Caffeine Effects</span><span lang="id">Efek Alkohol & Kafein</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: DMP: Activation & Coaching - REBUILT -->
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">
+        <span lang="en">DMP: Coaching & Activation Workflow</span>
+        <span lang="id">DMP: Alur Kerja Pelatihan & Aktivasi</span>
+    </h2>
+    <div class="content-area">
+        <div class="tiled-content" style="gap: 30px;">
+            <div class="tile">
+                <h3 style="color: #1E293B;">
+                    <span lang="en">1. On-Site Activation</span>
+                    <span lang="id">1. Aktivasi di Tempat</span>
+                </h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Health Talks & Socialization</span><span lang="id">Seminar Kesehatan & Sosialisasi</span></li>
+                        <li><span lang="en">Clinical Screening (HbA1c, etc.)</span><span lang="id">Skrining Klinis (HbA1c, dll.)</span></li>
+                        <li><span lang="en">Hands-on App Onboarding</span><span lang="id">Onboarding Aplikasi Langsung</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <h3 style="color: #1E293B;">
+                    <span lang="en">2. Weekly Coaching Workflow</span>
+                    <span lang="id">2. Alur Kerja Pelatihan Mingguan</span>
+                </h3>
+                <p>
+                    <span lang="en">Weekly coaching reviews topics from the curriculum and analyzes daily user data (glucose, food, activity). This feedback loop builds essential, long-term habits around the themes of managing diabetes.</span>
+                    <span lang="id">Pelatihan mingguan meninjau topik dari kurikulum dan menganalisis data harian pengguna (glukosa, makanan, aktivitas). Umpan balik ini membangun kebiasaan penting jangka panjang seputar tema pengelolaan diabetes.</span>
+                </p>
+            </div>
+            <div class="tile">
+                <h3 style="color: #1E293B;">
+                    <span lang="en">3. Engagement & Gamification</span>
+                    <span lang="id">3. Keterlibatan & Gamifikasi</span>
+                </h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Leaderboard (Most Consistent Logger)</span><span lang="id">Papan Peringkat (Pencatat Paling Konsisten)</span></li>
+                        <li><span lang="en">Weekly Group Discussion Prompts</span><span lang="id">Prompt Diskusi Grup Mingguan</span></li>
+                        <li><span lang="en">Monthly Mini-Challenges</span><span lang="id">Tantangan Mini Bulanan</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Program 2: Digital Prevention (DPP) - UPDATED -->
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">
+        <span lang="en">5. Program 2: Digital Prevention (DPP)</span>
+        <span lang="id">5. Program 2: Program Pencegahan Digital (DPP)</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div class="tile centered" style="background-color: #f0fdf4; border-color: #10B981;">
+                <img src="https://placehold.co/400x300/10B981/FFFFFF?text=DPP+Kit" alt="DPP Kit" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+                <h3 style="color: #10B981;">
+                    <span lang="en">DPP: Lifestyle Focus</span>
+                    <span lang="id">DPP: Fokus Gaya Hidup</span>
+                </h3>
+                <p>
+                    <span lang="en">Focuses on weight loss, nutrition habits, and increasing physical activity.</span>
+                    <span lang="id">Berfokus pada penurunan berat badan, kebiasaan nutrisi, dan peningkatan aktivitas fisik.</span>
+                </p>
+            </div>
+            <div>
+                <h3>
+                    <span lang="en">Objective</span>
+                    <span lang="id">Tujuan</span>
+                </h3>
+                <p>
+                    <span lang="en">To reduce diabetes risk and the development of other chronic diseases such as hypertension and obesity.</span>
+                    <span lang="id">Untuk mengurangi risiko diabetes dan perkembangan penyakit kronis lainnya seperti hipertensi dan obesitas.</span>
+                </s >
+                <h3 style="margin-top: 30px;">
+                    <span lang="en">Who Is Eligible</span>
+                    <span lang="id">Siapa yang Memenuhi Syarat</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%; margin-top: 10px;">
+                    <li><i class="fa-solid fa-weight-scale"></i><strong><span lang="en">Elevated BMI (≥ 27)</span><span lang="id">BMI Tinggi (≥ 27)</span></strong></li>
+                    <li><i class="fa-solid fa-chart-simple"></i><strong><span lang="en">Prediabetes Diagnosis</span><span lang="id">Diagnosis Pradiabetes</span></strong></li>
+                    <li><i class="fa-solid fa-heart-pulse"></i><strong><span lang="en">Other metabolic indicators</span><span lang="id">Indikator metabolik lainnya</span></strong> <span lang="en">(e.g., high blood pressure)</span><span lang="id">(misalnya, tekanan darah tinggi)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: DPP: Curriculum & Coaching -->
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">
+        <span lang="en">DPP: 6-Month Curriculum & Coaching</span>
+        <span lang="id">DPP: Kurikulum & Pelatihan 6 Bulan</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="gap: 30px;">
+            <div class="tile">
+                <h3><span lang="en">Curriculum Topics</span><span lang="id">Topik Kurikulum</span></h3>
+                <div class="bullet-list">
+                    <ul>
+                        <li><span lang="en">Energy Balance & Weight Loss</span><span lang="id">Keseimbangan Energi & Penurunan Berat Badan</span></li>
+                        <li><span lang="en">Plate Model (T & Y)</span><span lang="id">Model Piring (T & Y)</span></li>
+                        <li><span lang="en">Carb Reduction & Low-GI</span><span lang="id">Pengurangan Karbohidrat & GI Rendah</span></li>
+                        <li><span lang="en">Fiber, Protein, & Hydration</span><span lang="id">Serat, Protein, & Hidrasi</span></li>
+                        <li><span lang="en">Controlling Snacks & Cravings</span><span lang="id">Mengontrol Camilan & Keinginan</span></li>
+                        <li><span lang="en">Sleep & Stress Impact</span><span lang="id">Dampak Tidur & Stres</span></li>
+                        <li><span lang="en">Exercise for Weight Loss</span><span lang="id">Olahraga untuk Penurunan Berat Badan</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tile">
+                <h3><span lang="en">Coaching & Engagement</span><span lang="id">Pelatihan & Keterlibatan</span></h3>
+                 <div class="bullet-list">
+                    <ul>
+                        <li><i class="fa-solid fa-camera"></i><strong><span lang="en">Photo-Based Food Logging</span><span lang="id">Pencatatan Makanan Berbasis Foto</span></strong></li>
+                        <li><i class="fa-solid fa-comments"></i><strong><span lang="en">Weekly Nutrition Feedback</span><span lang="id">Umpan Balik Nutrisi Mingguan</span></strong></li>
+                        <li><i class="fa-solid fa-person-running"></i><strong><span lang="en">Habit-Setting Tasks</span><span lang="id">Tugas Pembentukan Kebiasaan</span></strong></li>
+                        <li><i class="fa-solid fa-trophy"></i><strong><span lang="en">Weight-Tracking Leaderboard</span><span lang="id">Papan Peringkat Pelacakan Berat Badan</span></strong></li>
+                        <li><i class="fa-solid fa-star"></i><strong><span lang="en">Weekly Missions (e.g., "Protein First")</span><span lang="id">Misi Mingguan (misalnya, "Protein Dulu")</span></strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Full Curriculum Integration - UPDATED -->
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">
+        <span lang="en">6. Full Curriculum Integration</span>
+        <span lang="id">6. Integrasi Kurikulum Penuh</span>
+    </h2>
+    <div class="content-area" style="flex-direction: column; align-items: flex-start;">
+        <p>
+            <span lang="en" class="block">The feedback loop of data we receive from user logs (glucose, food, weight) gets analyzed by our coaches. Combined with data from other users, we make best-practice decisions to improve an individual's health.</span>
+            <span lang="id" class="block">Umpan balik data yang kami terima dari log pengguna (glukosa, makanan, berat badan) dianalisis oleh pelatih kami. Dikombinasikan dengan data dari pengguna lain, kami membuat keputusan praktik terbaik untuk meningkatkan kesehatan individu.</span>
+        </p>
+        <p style="margin-top: 15px;">
+            <span lang="en" class="block">The curriculum is the backbone for this process, but it is the <strong>combination of curriculum, daily data, and coach-led chat</strong> that allows us to make informed, personalized decisions that drive real behavior change.</span>
+            <span lang="id" class="block">Kurikulum adalah tulang punggung proses ini, namun <strong>kombinasi antara kurikulum, data harian, dan obrolan yang dipimpin pelatih</strong> memungkinkan kami membuat keputusan yang terinformasi dan personal yang mendorong perubahan perilaku nyata.</span>
+        </p>
+        <p style="margin-top: 15px;">
+            <span lang="en" class="block">This framework ensures every user receives <strong>consistent and evidence-based education</strong> that is applied to their daily life.</span>
+            <span lang="id" class="block">Kerangka kerja ini memastikan setiap pengguna menerima <strong>pendidikan yang konsisten dan berbasis bukti</strong> yang diterapkan dalam kehidupan sehari-hari mereka.</span>
+        </p>
+        <div class="tiled-content" style="margin-top: 30px; gap: 20px;">
+            <div class="tile centered" style="background-color: #F8FAFC;">
+                <h3 style="color: #1E293B;"><span lang="en">Consultations</span><span lang="id">Konsultasi</span></h3>
+            </div>
+            <div class="tile centered" style="background-color: #F8FAFC;">
+                <h3 style="color: #1E293B;"><span lang="en">Daily Chat Nudges</span><span lang="id">Dorongan Obrolan Harian</span></h3>
+            </div>
+            <div class="tile centered" style="background-color: #F8FAFC;">
+                <h3 style="color: #1E293B;"><span lang="en">Weekly Themes</span><span lang="id">Tema Mingguan</span></h3>
+            </div>
+            <div class="tile centered" style="background-color: #F8FAFC;">
+                <h3 style="color: #1E293B;"><span lang="en">Group Challenges</span><span lang="id">Tantangan Grup</span></h3>
+            </div>
+            <div class="tile centered" style="background-color: #F8FAFC;">
+                <h3 style="color: #1E293B;"><span lang="en">Reporting</span><span lang="id">Pelaporan</span></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: Program Features (What Companies Receive) - UPDATED -->
+<div class="slide-container" id="slide11">
+    <h2 class="slide-title">
+        <span lang="en">7. Program Features</span>
+        <span lang="id">7. Fitur Program</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="gap: 30px 50px;">
+            <div class="bullet-list" style="margin-top: 0;">
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-handshake"></i><strong><span lang="en">On-Site Activation & Relationship Building</span><span lang="id">Aktivasi di Tempat & Membangun Hubungan</span></strong><br><span style="font-size: 16px;"><span lang="en">Site visits for Health Talks, screening, and onboarding.</span><span lang="id">Kunjungan ke lokasi untuk Seminar Kesehatan, skrining, & onboarding.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-video"></i><strong><span lang="en">Personalized Video Coaching</span><span lang="id">Pelatihan Video Personal</span></strong><br><span style="font-size: 16px;"><span lang="en">1:1 sessions focusing on data, habits, and goals.</span><span lang="id">Sesi 1:1 berfokus pada data, kebiasaan, & target.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-comments"></i><strong><span lang="en">Personalized Chat Support</span><span lang="id">Dukungan Obrolan Personal</span></strong><br><span style="font-size: 16px;"><span lang="en">Daily chat access (via popular messaging apps) for questions and reminders.</span><span lang="id">Akses obrolan harian (via aplikasi pesan populer) untuk pertanyaan & pengingat.</span></span></li>
+            </div>
+            <div class="bullet-list" style="margin-top: 0;">
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-book-open"></i><strong><span lang="en">Full Health Curriculum</span><span lang="id">Kurikulum Kesehatan Penuh</span></strong><br><span style="font-size: 16px;"><span lang="en">12-month DMP & 6-month DPP structured education.</span><span lang="id">Edukasi terstruktur DMP 12 bulan & DPP 6 bulan.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-box-open"></i><strong><span lang="en">Loop Health Kits</span><span lang="id">Kit Loop Health</span></strong><br><span style="font-size: 16px;"><span lang="en">DMP: Glucometer with unlimited strips & lancets.<br>DPP: Digital weighing scale.</span><span lang="id">DMP: Glukometer dengan strip & lanset tanpa batas.<br>DPP: Timbangan digital.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-trophy"></i><strong><span lang="en">Gamification & Groups</span><span lang="id">Gamifikasi & Grup</span></strong><br><span style="font-size: 16px;"><span lang="en">Leaderboards, weekly prompts, and challenges.</span><span lang="id">Papan peringkat, prompt mingguan, & tantangan.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-chart-pie"></i><strong><span lang="en">Monthly Reporting</span><span lang="id">Pelaporan Bulanan</span></strong><br><span style="font-size: 16px;"><span lang="en">Simple PDF report on clinical and app progress.</span><span lang="id">Laporan PDF sederhana tentang kemajuan klinis & aplikasi.</span></span></li>
+                <li style="margin-bottom: 25px;"><i class="fa-solid fa-star"></i><strong><span lang="en">Ramadan / Fasting Curriculum</span><span lang="id">Kurikulum Ramadan / Puasa</span></strong><br><span style="font-size: 16px;"><span lang="en">Special module for safe fasting (meals, hydration, meds).</span><span lang="id">Modul khusus untuk puasa aman (makan, hidrasi, obat).</span></span></li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 12: Implementation Plan - UPDATED -->
+<div class="slide-container" id="slide12">
+    <h2 class="slide-title">
+        <span lang="en">8. Implementation Plan & Timelines</span>
+        <span lang="id">8. Rencana & Linimasa Implementasi</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="gap: 40px;">
+            <div style="background-color: #f0f9ff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px;">
+                <h3 style="color: #3B82F6; margin-bottom: 20px;">
+                    <span lang="en">Diabetes Management (DMP) - 12 Months</span>
+                    <span lang="id">Manajemen Diabetes (DMP) - 12 Bulan</span>
+                </h3>
+                <ul class="bullet-list" style="max-width: 100%;">
+                    <li><i class="fa-solid fa-calendar-day"></i><strong><span lang="en">Month 0: Kickoff & Onboarding</span><span lang="id">Bulan 0: Kickoff & Onboarding</span></strong><br><span style="font-size: 16px;"><span lang="en">Health Talks, Screening (HbA1c ≥ 6.5%), App Onboarding, First Video Consult, Goal Setting.</span><span lang="id">Seminar Kesehatan, Skrining (HbA1c ≥ 6.5%), Onboarding Aplikasi, Konsultasi Video Pertama, Penetapan Target.</span></span></li>
+                    <li><i class="fa-solid fa-person-walking"></i><strong><span lang="en">Months 1-6: Active Coaching</span><span lang="id">Bulan 1-6: Pelatihan Aktif</span></strong><br><span style="font-size: 16px;"><span lang="en">Daily glucose logging, weekly coaching, monthly consults, curriculum delivery.</span><span lang="id">Pencatatan glukosa harian, pelatihan mingguan, konsultasi bulanan, penyampaian kurikulum.</span></span></li>
+                    <li><i class="fa-solid fa-clipboard-check"></i><strong><span lang="en">Month 6: Mid-Term Review</span><span lang="id">Bulan 6: Tinjauan Tengah Program</span></strong><br><span style="font-size: 16px;"><span lang="en">Follow-up HbA1c test, progress analysis, plan adjustment.</span><span lang="id">Tes HbA1c lanjutan, analisis kemajuan, penyesuaian rencana.</span></span></li>
+                    <li><i class="fa-solid fa-person-walking-dashed"></i><strong><span lang="en">Months 7-12: Sustained Coaching</span><span lang="id">Bulan 7-12: Pelatihan Berkelanjutan</span></strong><br><span style="font-size: 16px;"><span lang="en">Continued support, focus on habit maintenance and complication prevention.</span><span lang="id">Dukungan berkelanjutan, fokus pada pemeliharaan kebiasaan dan pencegahan komplikasi.</span></span></li>
+                    <li><i class="fa-solid fa-flag-checkered"></i><strong><span lang="en">Month 12: Final Review</span><span lang="id">Bulan 12: Tinjauan Akhir</span></strong><br><span style="font-size: 16px;"><span lang="en">Final HbA1c test, full program report, and recommendations.</span><span lang="id">Tes HbA1c akhir, laporan program penuh, dan rekomendasi.</span></span></li>
+                </ul>
+            </div>
+
+            <div style="background-color: #f0fdf4; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px;">
+                <h3 style="color: #10B981; margin-bottom: 20px;">
+                    <span lang="en">Digital Prevention (DPP) - 6 Months</span>
+                    <span lang="id">Pencegahan Digital (DPP) - 6 Bulan</span>
+                </h3>
+                 <ul class="bullet-list" style="max-width: 100%;">
+                    <li><i class="fa-solid fa-calendar-day"></i><strong><span lang="en">Month 0: Kickoff & Onboarding</span><span lang="id">Bulan 0: Kickoff & Onboarding</span></strong><br><span style="font-size: 16px;"><span lang="en">Health Talks, Screening (High BMI / Prediabetes), App Onboarding, First Video Consult, Goal Setting (% weight loss).</span><span lang="id">Seminar Kesehatan, Skrining (BMI Tinggi / Pradiabetes), Onboarding Aplikasi, Konsultasi Video Pertama, Penetapan Target (% BB).</span></span></li>
+                    <li><i class="fa-solid fa-person-running"></i><strong><span lang="en">Months 1-3: Active Coaching</span><span lang="id">Bulan 1-3: Pelatihan Aktif</span></strong><br><span style="font-size: 16px;"><span lang="en">Daily food/weight logging, weekly coaching, monthly consults, core curriculum.</span><span lang="id">Pencatatan makanan/berat badan harian, pelatihan mingguan, konsultasi bulanan, kurikulum inti.</span></span></li>
+                    <li><i class="fa-solid fa-clipboard-check"></i><strong><span lang="en">Month 3: Mid-Term Review</span><span lang="id">Bulan 3: Tinjauan Tengah Program</span></strong><br><span style="font-size: 16px;"><span lang="en">Weight & habit check-in, plan adjustment.</span><span lang="id">Pemeriksaan berat badan & kebiasaan, penyesuaian rencana.</span></span></li>
+                    <li><i class="fa-solid fa-person-running-fast"></i><strong><span lang="en">Months 4-6: Habit Reinforcement</span><span lang="id">Bulan 4-6: Penguatan Kebiasaan</span></strong><br><span style="font-size: 16px;"><span lang="en">Focus on sustainability, new challenges, and long-term planning.</span><span lang="id">Fokus pada keberlanjutan, tantangan baru, dan perencanaan jangka panjang.</span></span></li>
+                    <li><i class="fa-solid fa-flag-checkered"></i><strong><span lang="en">Month 6: Final Review</span><span lang="id">Bulan 6: Tinjauan Akhir</span></strong><br><span style="font-size: 16px;"><span lang="en">Final weight/BMI check, full program report. Can be repeated for a new cycle.</span><span lang="id">Pemeriksaan berat/BMI akhir, laporan program penuh. Dapat diulang untuk siklus baru.</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 13: Case Study (APP Pilot - Clinical) - WAS 3 -->
+<div class="slide-container" id="slide13">
+    <h2 class="slide-title">
+        <span lang="en">9. Results: Case Study (APP Pilot - Jambi & Perawang)</span>
+        <span lang="id">9. Hasil: Studi Kasus (Pilot APP - Jambi & Perawang)</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: center;">
+            <div class="tile" style="flex-grow: 1.2; background-color: #f0f9ff; border-color: #3B82F6;">
+                <h3 style="color: #3B82F6;">
+                    <span lang="en">High User Engagement (Per Month)</span>
+                    <span lang="id">Keterlibatan Pengguna Tinggi (Per Bulan)</span>
+                </h3>
+                <div class="tiled-content" style="gap: 15px; margin-top: 20px;">
+                    <div class="tile centered">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">50</div>
+                        <h3 style="color: #1E293B; font-size: 20px;"><span lang="en">Total Data Inputs</span><span lang="id">Total Input Data</span></h3>
+                    </div>
+                    <div class="tile centered">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">17</div>
+                        <h3 style="color: #1E293B; font-size: 20px;"><span lang="en">Blood Sugar Tests</span><span lang="id">Tes Gula Darah</span></h3>
+                    </div>
+                     <div class="tile centered">
+                        <div class="number" style="color: #3B82F6; font-size: 80px;">4</div>
+                        <h3 style="color: #1E293B; font-size: 20px;"><span lang="en">Coach Consultations</span><span lang="id">Konsultasi Pelatih</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tile" style="flex-grow: 0.8; background-color: #f0fdf4; border-color: #10B981;">
+                <h3 style="color: #10B981;">
+                    <span lang="en">Successful Clinical Indicators</span>
+                    <span lang="id">Indikator Klinis yang Berhasil</span>
+                </h3>
+                <p>
+                    <span lang="en" class="block">Of the <strong>49 active users</strong> who completed the <strong>6-month program (Nov 2023 - May 2024)</strong>:</span>
+                    <span lang="id" class="block">Dari <strong>49 pengguna aktif</strong> yang menyelesaikan <strong>program 6 bulan (Nov 2023 - Mei 2024)</strong>:</span>
+                </p>
+                <div class="tiled-content" style="gap: 15px; margin-top: 20px;">
+                    <div class="tile centered">
+                        <div class="number" style="color: #10B981; font-size: 60px;">38/49</div>
+                        <h3 style="color: #1E293B; font-size: 18px;"><span lang="en">Users Improved HbA1c</span><span lang="id">Pengguna Memperbaiki HbA1c</span></h3>
+                    </div>
+                    <div class="tile centered">
+                        <div class="number" style="color: #10B981; font-size: 60px;">1.2%</div>
+                        <h3 style="color: #1E293B; font-size: 18px;"><span lang="en">Avg. HbA1c Improvement</span><span lang="id">Rata-rata Perbaikan HbA1c</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 14: Case Study (APP Pilot - Cost Savings) - WAS 4 -->
+<div class="slide-container" id="slide14">
+    <h2 class="slide-title">
+        <span lang="en">Results: Potential Cost Savings (APP Pilot Data)</span>
+        <span lang="id">Hasil: Potensi Penghematan Biaya (Data Pilot APP)</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column" style="align-items: flex-start; grid-template-columns: 1.2fr 1fr; gap: 30px;">
+            <div>
+                <h3>
+                    <span lang="en">Favorable Shift in HbA1c Ranges (49 Users)</span>
+                    <span lang="id">Pergeseran Rentang HbA1c yang Menguntungkan (49 Pengguna)</span>
+                </h3>
+                <p>
+                    <span lang="en">Participants (Nov 2023 - May 2024) moved from high-cost categories to healthier, lower-cost categories.</span>
+                    <span lang="id">Peserta (Nov 2023 - Mei 2024) beralih dari kategori biaya tinggi ke kategori yang lebih sehat dan berbiaya lebih rendah.</span>
+                </p>
+                <div class="table-layout" style="margin-top: 20px;">
+                    <table style="font-size: 14px;"> <!-- Smaller font -->
+                        <thead>
+                            <tr>
+                                <th><span lang="en">HbA1c Category</span><span lang="id">Kategori HbA1c</span></th>
+                                <th><span lang="en">Avg. Annual Cost*</span><span lang="id">Biaya Tahunan Rata-rata*</span></th>
+                                <th><span lang="en">M0 Users</span><span lang="id">Pengguna B0</span></th>
+                                <th><span lang="en">M0 Implied Cost</span><span lang="id">Biaya B0</span></th>
+                                <th><span lang="en">M6 Users</span><span lang="id">Pengguna B6</span></th>
+                                <th><span lang="en">M6 Implied Cost</span><span lang="id">Biaya B6</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong><span lang="en">Poor (>9.0%)</span><span lang="id">Buruk (>9.0%)</span></strong></td>
+                                <td>$1,405</td>
+                                <td>13</td>
+                                <td>$18,265</td>
+                                <td style="color: #10B981;">2</td>
+                                <td style="color: #10B981;">$2,810</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span lang="en">Fair (7.0-8.9%)</span><span lang="id">Cukup (7.0-8.9%)</span></strong></td>
+                                <td>$1,075</td>
+                                <td>19</td>
+                                <td>$20,425</td>
+                                <td style="color: #10B981;">13</td>
+                                <td style="color: #10B981;">$13,975</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span lang="en">Good (6.5-6.9%)</span><span lang="id">Baik (6.5-6.9%)</span></strong></td>
+                                <td>$769</td>
+                                <td>3</td>
+                                <td>$2,307</td>
+                                <td style="color: #10B981;">8</td>
+                                <td style="color: #10B981;">$6,152</td>
+                            </tr>
+                             <tr>
+                                <td><strong><span lang="en">Prediabetes (5.7-6.4%)</span><span lang="id">Pradiabetes (5.7-6.4%)</span></strong></td>
+                                <td>$769*</td>
+                                <td>11</td>
+                                <td>$8,459</td>
+                                <td style="color: #10B981;">16</td>
+                                <td style="color: #10B981;">$12,304</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span lang="en">Below Prediabetes (<5.6%)</span><span lang="id">Di Bawah Pradiabetes (<5.6%)</span></strong></td>
+                                <td>$769*</td>
+                                <td>3</td>
+                                <td>$2,307</td>
+                                <td style="color: #10B981;">10</td>
+                                <td style="color: #10B981;">$7,690</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><strong><span lang="en">Total Potential Annual Cost</span><span lang="id">Total Potensi Biaya Tahunan</span></strong></td>
+                                <td><strong>$51,763</strong></td>
+                                <td><strong>49 <span lang="en">Users</span><span lang="id">Pengguna</span></strong></td>
+                                <td style="color: #10B981;"><strong>$42,931</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h3>
+                    <span lang="en">Potential Annual Savings</span>
+                    <span lang="id">Potensi Penghematan Tahunan</span>
+                </h3>
+                <p>
+                    <span lang="en">This clinical improvement translates to significant long-term savings.</span>
+                    <span lang="id">Perbaikan klinis ini berarti penghematan jangka panjang yang signifikan.</span>
+                </p>
+                <div class="tile" style="margin-top: 20px; background-color: #f0fdf4; border-color: #10B981;">
+                    <h3 style="color: #1E293B;"><span lang="en">Total Potential Annual Savings</span><span lang="id">Total Potensi Penghematan Tahunan</span></h3>
+                    <div class="number" style="color: #10B981; font-size: 80px;">~$8,832</div>
+                    <p style="font-size: 24px; margin-top: -10px; font-weight: 700;"><span lang="en">(approx. Rp 132 Juta)</span><span lang="id">(sekitar Rp 132 Juta)</span></p>
+                    <p style="font-size: 20px; margin-top: 10px;"><span lang="en">(for 49 users)</span><span lang="id">(untuk 49 pengguna)</span></p>
+                </div>
+                 <div class="tile" style="margin-top: 20px; background-color: #F8FAFC; border-color: #E2E8F0;">
+                    <h3 style="color: #1E293B;"><span lang="en">Avg. Annual Cost Per Person</span><span lang="id">Biaya Tahunan Rata-rata Per Orang</span></h3>
+                    <div class="number" style="color: #EF4444; font-size: 50px;">$1,056 <span style="color: #1E293B; font-size: 40px;">→</span> $876</div>
+                    <p style="font-size: 20px; margin-top: 10px;"><span lang="en">(Month 0 vs. Month 6)</span><span lang="id">(Bulan 0 vs. Bulan 6)</span></p>
+                </div>
+                <p style="font-size: 14px; color: #64748B; margin-top: 15px;">
+                    <span lang="en" class="block">*Cost data from 2020 Gadjah Mada University (UGM) study. Cost for prediabetes/good categories ($769) is based on UGM study's total cost calculations.</span>
+                    <span lang="id" class="block">*Data biaya dari studi Universitas Gadjah Mada (UGM) 2020. Biaya untuk kategori pradiabetes/baik ($769) didasarkan pada perhitungan total biaya studi UGM.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 15: Our Corporate Partners (BLANK) - WAS 18 -->
+<div class="slide-container" id="slide15">
+    <h2 class="slide-title">
+        <span lang="en">10. Our Corporate Partners</span>
+        <span lang="id">10. Mitra Korporat Kami</span>
+    </h2>
+    <div class="content-area" style="flex-direction: column; align-items: flex-start;">
+        <p>
+            <span lang="en">We are proud to have partnered with leading companies and organizations across Indonesia to deliver measurable health outcomes.</span>
+            <span lang="id">Kami bangga telah bermitra dengan perusahaan dan organisasi terkemuka di seluruh Indonesia untuk memberikan hasil kesehatan yang terukur.</span>
+        </p>
+        <div class="tile" style="width: 100%; min-height: 400px; justify-content: center; align-items: center; background-color: #F8FAFC; margin-top: 20px;">
+            <p style="font-size: 24px; color: #94A3B8;">
+                <span lang="en">[Partner Logos Here]</span>
+                <span lang="id">[Logo Mitra di Sini]</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 16: Pricing & Support - UPDATED - WAS 10 -->
+<div class="slide-container" id="slide16">
+    <h2 class="slide-title">
+        <span lang="en">11. Pricing & Support</span>
+        <span lang="id">11. Harga & Dukungan</span>
+    </h2>
+    <div class="content-area">
+        <div class="two-column tiled" style="gap: 30px;">
+            <div>
+                <h3>
+                    <span lang="en">Program Pricing</span>
+                    <span lang="id">Harga Program</span>
+                </h3>
+                <div class="table-layout" style="margin-bottom: 20px;">
+                    <table style="font-size: 16px;">
+                        <thead>
+                            <tr>
+                                <th><span lang="en">Program</span><span lang="id">Program</span></th>
+                                <th><span lang="en">Duration</span><span lang="id">Durasi</span></th>
+                                <th><span lang="en">Key KPI</span><span lang="id">KPI Utama</span></th>
+                                <th><span lang="en">Fee / Member / Month</span><span lang="id">Biaya / Anggota / Bulan</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong><span lang="en">Diabetes Management (DMP)</span><span lang="id">Manajemen Diabetes (DMP)</span></strong></td>
+                                <td><span lang="en">12 Months</span><span lang="id">12 Bulan</span></td>
+                                <td>HbA1c</td>
+                                <td class="fee">Rp 99,000</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span lang="en">Digital Prevention (DPP)</span><span lang="id">Pencegahan Digital (DPP)</span></strong></td>
+                                <td><span lang="en">6 Months</span><span lang="id">6 Bulan</span></td>
+                                <td><span lang="en">% Weight Loss</span><span lang="id">% Penurunan BB</span></td>
+                                <td class="fee">Rp 75,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <h3 style="margin-top: 20px;">
+                    <span lang="en">Optional Costs</span>
+                    <span lang="id">Biaya Opsional</span>
+                </h3>
+                <ul style="list-style-type: disc; padding-left: 25px; font-size: 16px;">
+                    <li><strong><span lang="en">HbA1c Testing:</span><span lang="id">Tes HbA1c:</span></strong> <span lang="en">Rp. 120,000/test (Available on-site for DMP).</span><span lang="id">Rp 120.000/tes (Tersedia di tempat untuk DMP).</span></li>
+                </ul>
+            </div>
+            <div>
+                <h3>
+                    <span lang="en">On-Site Support & Travel</span>
+                    <span lang="id">Dukungan & Perjalanan di Tempat</span>
+                </h3>
+                 <ul style="list-style-type: disc; padding-left: 25px; font-size: 16px; line-height: 1.6;">
+                    <li><strong><span lang="en">Proposed Visits:</span><span lang="id">Kunjungan yang Diusulkan:</span></strong> <span lang="en">Start of Program (Month 0), DMP Mid-Point (Month 6), and Final Review (Month 12).</span><span lang="id">Awal Program (Bulan 0), Tinjauan Tengah DMP (Bulan 6), dan Tinjauan Akhir (Bulan 12).</span></li>
+                    <li><strong><span lang="en">Free Travel:</span><span lang="id">Perjalanan Gratis:</span></strong> <span lang="en">Free for JABODETABEK locations OR for any location with <strong>100+ users</strong>.</span><span lang="id">Gratis untuk lokasi JABODETABEK ATAU lokasi mana pun dengan <strong>100+ pengguna</strong>.</span></li>
+                    <li><strong><span lang="en">Fixed Travel Fee:</span><span lang="id">Biaya Perjalanan Tetap:</span></strong> <span lang="en">For locations <strong>outside JABODETABEK</strong> with <100 users, a flat fee of <strong>Rp. 8,000,000 per visit</strong> applies.</span><span lang="id">Untuk lokasi <strong>di luar JABODETABEK</strong> dengan <100 pengguna, berlaku biaya tetap <strong>Rp 8.000.000 per kunjungan</strong>.</span></li>
+                    <li><span lang="en">Final progress presentations are in-person for JABODETABEK and online for other areas (unless combined with a paid visit).</span><span lang="id">Presentasi kemajuan akhir dilakukan secara langsung untuk JABODETABEK dan online untuk area lain (kecuali digabungkan dengan kunjungan berbayar).</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 17: Closing Statement - UPDATED - WAS 11 -->
+<div class="slide-container" id="slide17">
+    <h2 class="slide-title">
+        <span lang="en">12. Closing Statement</span>
+        <span lang="id">12. Pernyataan Penutup</span>
+    </h2>
+    <div class="content-area" style="flex-direction: column; justify-content: center; text-align: center;">
+         <div class="final-slide-layout" style="width: 100%; max-width: 900px;">
+            <p style="font-size: 20px; line-height: 1.6;">
+                <span lang="en">The Equira x Loop Program provides a structured, data-driven, and behavior-focused approach to managing chronic disease and preventing future risks in your workforce.</span>
+                <span lang="id">Program Equira x Loop menyediakan pendekatan terstruktur, berbasis data, dan berfokus pada perilaku untuk mengelola penyakit kronis dan mencegah risiko di masa depan pada tenaga kerja Anda.</span>
+            </p>
+            <p class="quote" style="margin-top: 30px;">
+                <span lang="en">We look forward to building on the success of the pilots we have successfully run at Jambi, Perawang, and OKI Palembang, and continuing our PKS agreement to support your organizations.</span>
+                <span lang="id">Kami berharap dapat membangun kesuksesan program percontohan yang telah kami jalankan di Jambi, Perawang, dan OKI Palembang, serta melanjutkan perjanjian PKS kami untuk mendukung organisasi Anda.</span>
+            </p>
+         </div>
+    </div>
+</div>
 
 <!-- Slide 18: Thank You / Contact - (WAS 19) -->
 <div class="slide-container" id="slide18">
@@ -461,7 +1353,7 @@ body.show-id [lang="en"] {
                 🌐 www.loophealth.id
             </p>
             <!-- TYPO FIX: Changed classG to class -->
-            <p class="quote" style="margin-top: 40px;">
+            <p class_G_="quote" style="margin-top: 40px;">
                 <span lang="en">“A better performing workforce starts with healthier employees.”</span>
                 <span lang="id">“Tenaga kerja yang berkinerja lebih baik dimulai dari karyawan yang lebih sehat.”</span>
             </p>
